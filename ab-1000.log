@@ -1,0 +1,56 @@
+$ ab -k -t 30 -c 1000 http://ec2-35-165-179-248.us-west-2.compute.amazonaws.com:4000/
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking ec2-35-165-179-248.us-west-2.compute.amazonaws.com (be patient)
+Completed 5000 requests
+Completed 10000 requests
+Completed 15000 requests
+Completed 20000 requests
+Completed 25000 requests
+Completed 30000 requests
+Completed 35000 requests
+Completed 40000 requests
+Completed 45000 requests
+Completed 50000 requests
+Finished 50000 requests
+
+
+Server Software:
+Server Hostname:        ec2-35-165-179-248.us-west-2.compute.amazonaws.com
+Server Port:            4000
+
+Document Path:          /
+Document Length:        2 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   17.336 seconds
+Complete requests:      50000
+Failed requests:        72
+   (Connect: 0, Receive: 0, Length: 72, Exceptions: 0)
+Keep-Alive requests:    49928
+Total transferred:      12781568 bytes
+HTML transferred:       99856 bytes
+Requests per second:    2884.19 [#/sec] (mean)
+Time per request:       346.718 [ms] (mean)
+Time per request:       0.347 [ms] (mean, across all concurrent requests)
+Transfer rate:          720.01 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   61 622.7      0    8537
+Processing:    45  204 357.3    163    7060
+Waiting:        0  196 298.0    163    6744
+Total:         45  264 827.8    163   15279
+
+Percentage of the requests served within a certain time (ms)
+  50%    163
+  66%    166
+  75%    167
+  80%    169
+  90%    176
+  95%    539
+  98%   1325
+  99%   3439
+ 
